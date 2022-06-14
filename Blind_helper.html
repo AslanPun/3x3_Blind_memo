@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    <title>Blind Helper</title>
+</head>
+<body>
+    <div id="background">
+        <!-- <img src="mangaSpeed.jpg" class="stretch" alt="" /> -->
+    </div>
+    <h1>Help remember your 3x3 Blind memo</h1>
+    
+    <h2>Click the letter pair that you've memorized</h2>
+    <!-- <h1>Boi</h1> -->
+    <!-- <h1 class="yourTime"><span id="displayTime">0.000 s</span></h1> -->
+    <div class="retry">
+        <button onclick="reset()" class="retryBut">Reset</button>
+    </div>
+    <!-- Game -->
+    <div class="game">
+        <div class="topRow">
+            <button class="but" id="aer" onclick="linking(this)">a</button>
+            <button class="but" id="AQ" onclick="linking(this)">A</button>
+            <button class="but" id="bnq" onclick="linking(this)">b</button>
+            
+        </div>
+        
+        <div class="midRow">
+            <button class="but" id="DE" onclick="linking(this)">D</button>
+            <button class="but" id="but5" onclick="checkReq(this)"></button>
+            <button class="but" id="BM" onclick="linking(this)">B</button>
+            
+        </div>
+        
+        <div class="botRow">
+            <button class="but" id="dfi" onclick="linking(this)">d</button>
+            <button class="but" id="CI" onclick="linking(this)">C</button>
+            <button class="but" id="cjm" onclick="linking(this)">c</button>
+            
+        </div>
+        <!-- adding the second and third layer -->
+        <div class="botRow">
+            <button class="fakebut" id="but7" onclick="checkReq(this)"></button>
+            <button class="fakebut" id="but8" onclick="checkReq(this)"></button>
+            <button class="fakebut" id="but9" onclick="checkReq(this)"></button>
+            <button class="but" id="aer" onclick="linking(this)">e</button>
+            <button class="but" id="DE" onclick="linking(this)">E</button>
+            <button class="but" id="dfi" onclick="linking(this)">f</button>
+            <button class="but" id="dfi" onclick="linking(this)">i</button>
+            <button class="but" id="CI" onclick="linking(this)">I</button>
+            <button class="but" id="cjm" onclick="linking(this)">j</button>
+            <button class="but" id="cjm" onclick="linking(this)">m</button>
+            <button class="but" id="BM" onclick="linking(this)">M</button>
+            <button class="but" id="bnq" onclick="linking(this)">n</button>
+            <button class="but" id="bnq" onclick="linking(this)">q</button>
+            <button class="but" id="AQ" onclick="linking(this)">Q</button>
+            <button class="but" id="aer" onclick="linking(this)">r</button>
+        </div>
+        <div class="botRow">
+            <button class="fakebut" id="but7" onclick="checkReq(this)"></button>
+            <button class="fakebut" id="but8" onclick="checkReq(this)"></button>
+            <button class="fakebut" id="but9" onclick="checkReq(this)"></button>
+            <button class="but" id="HR" onclick="linking(this)">H</button>
+            <button class="but" id="but7" onclick="checkReq(this)"></button>
+            <button class="but" id="FL" onclick="linking(this)">F</button>
+            <button class="but" id="FL" onclick="linking(this)">L</button>
+            <button class="but" id="but3" onclick="checkReq(this)"></button>
+            <button class="but" id="JP" onclick="linking(this)">J</button>
+            <button class="but" id="JP" onclick="linking(this)">P</button>
+            <button class="but" id="but9" onclick="checkReq(this)"></button>
+            <button class="but" id="NT" onclick="linking(this)">N</button>
+            <button class="but" id="NT" onclick="linking(this)">T</button>
+            <button class="but" id="but8" onclick="checkReq(this)"></button>
+            <button class="but" id="HR" onclick="linking(this)">R</button>
+        </div>
+        <div class="botRow">
+            <button class="fakebut" id="but7" onclick="checkReq(this)"></button>
+            <button class="fakebut" id="but8" onclick="checkReq(this)"></button>
+            <button class="fakebut" id="but9" onclick="checkReq(this)"></button>
+            <button class="but" id="hsx" onclick="linking(this)">h</button>
+            <button class="but" id="GX" onclick="linking(this)">G</button>
+            <button class="but" id="glu" onclick="linking(this)">g</button>
+            <button class="but" id="glu" onclick="linking(this)">l</button>
+            <button class="but" id="KU" onclick="linking(this)">K</button>
+            <button class="but" id="kpv" onclick="linking(this)">k</button>
+            <button class="but" id="kpv" onclick="linking(this)">p</button>
+            <button class="but" id="OV" onclick="linking(this)">O</button>
+            <button class="but" id="otw" onclick="linking(this)">o</button>
+            <button class="but" id="otw" onclick="linking(this)">t</button>
+            <button class="but" id="SW" onclick="linking(this)">S</button>
+            <button class="but" id="hsx" onclick="linking(this)">s</button>
+        </div>
+        <div class="botRow">
+            <button class="but" id="glu" onclick="linking(this)">u</button>
+            <button class="but" id="KU" onclick="linking(this)">U</button>
+            <button class="but" id="kpv" onclick="linking(this)">v</button>
+        </div>
+        <div class="botRow">
+            <button class="but" id="GX" onclick="linking(this)">X</button>
+            <button class="but" id="but8" onclick="checkReq(this)"></button>
+            <button class="but" id="OV" onclick="linking(this)">V</button>
+        </div>
+        <div class="botRow">
+            <button class="but" id="hsx" onclick="linking(this)">x</button>
+            <button class="but" id="SW" onclick="linking(this)">W</button>
+            <button class="but" id="otw" onclick="linking(this)">w</button>
+        </div>
+        <!-- end of the second and third layer -->
+        <br>
+        <br>
+        <br>
+        
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
