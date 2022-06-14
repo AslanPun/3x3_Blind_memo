@@ -10,7 +10,7 @@ body {
     border: 0px;
     /* background-image: url("mangaSpeed.jpg"); */
     background-color: rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
+    color:rgb(151, 146, 137);
 
 }
 
@@ -37,9 +37,30 @@ h2 {
 p {
     text-align: center;
 }
-.but {
+.green {
+    background-color:rgb(144, 238, 144);
+}
 
+.gray {
+    background-color:rgb(11, 13, 14);
+}
+
+.yellow {
+    background-color:rgb(240,230,140);
+}
+.dark {
+    background-color:rgb(11, 13, 14);
+    color:rgb(7, 119, 153);
+}
+.light {
     background-color:rgb(211, 211, 211);
+    color:rgb(0, 0, 0);
+}
+
+.but {
+    border-color: #3c362b;
+    /* color:rgb(0, 0, 0); */
+    
     /* background-color:rgb(144, 238, 144); */
     /* background-color:rgb(240,230,140); */ 
     
@@ -50,6 +71,11 @@ p {
     /* border-radius: 1rem; */
 
 }
+.but:hover {
+    cursor: pointer;
+
+}
+
 .fakebut {
 
     background-color:rgb(0, 0, 0);
@@ -88,7 +114,7 @@ p {
     
 }
 .retryBut {
-    background-color:rgb(144, 238, 144) ;
+    background-color:rgb(7, 119, 153) ;
     height:2rem;
     width:4rem;
     font-size: 1rem;
@@ -96,8 +122,10 @@ p {
 
 }
 .retryBut:hover {
-    background-color:rgb(129, 212, 129) ;
+    background-color:rgb(7, 98, 126) ;
+    cursor: pointer;
 }
 #displayTime {
     background-color: black;
 }
+
