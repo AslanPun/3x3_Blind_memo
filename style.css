@@ -8,31 +8,42 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    /* background-image: url("mangaSpeed.jpg"); */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(24, 24, 24);
     color:rgb(151, 146, 137);
 
 }
 
-#background {
+#background1 {
+    
     width: 100%; 
     height: 100%; 
-    position: absolute; 
+    position:absolute;
     left: 0px; 
     top: 0px; 
     z-index: -1;
 }
 
-.stretch {
-    width:100%;
-    height:100%;
-}
 
 h1 {
     text-align: center;
 }
 h2 {
     text-align: center;
+}
+h3 {
+    text-align: center;
+    
+}
+.sequence{
+    text-align: center;
+}
+.edge {
+    text-align: center;
+    display:inline;
+}
+.corner {
+    text-align: center;
+    display:inline;
 }
 p {
     text-align: center;
@@ -54,7 +65,7 @@ p {
 }
 
 .but {
-    border-color: #3c362b;
+    border-color: rgb(24, 24, 24);
     /* color:rgb(0, 0, 0); */
     
     /* background-color:rgb(144, 238, 144); */
@@ -74,14 +85,15 @@ p {
 
 .fakebut {
 
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(24, 24, 24);
     /* background-color:rgb(144, 238, 144); */
     /* background-color:rgb(240,230,140); */ 
-    
+    border-color: rgb(24, 24, 24);
     height:5rem;
     width:5rem;
     font-size: 4rem;
     text-align: center;
+    visibility:hidden
     /* border-radius: 1rem; */
 
 }
