@@ -12,16 +12,18 @@
         <img src="cube_logo_light.png" id="img" alt="" />
         
     </div>
-    <h1>Help remember your 3x3 Blind memo</h1>
+    <h1>Track your 3x3 Blind memo (Pochmann Method)</h1>
     
-    <h2>Click the letter pair that you've memorized</h2>
+    <h2>Click the letter pair that you've been to</h2>
 
 
     <div class="sequence">
+        <button onclick="undoEdge()" class="retryBut">Delete</button>
         <h1 class="edge">Edges:</h1>
         <h1 class="edge" id="edge"></h1>
     </div>
     <div class="sequence">
+        <button onclick="undoCorner()" class="retryBut">Delete</button>
         <h1 class="corner">Corners:</h1>
         <h1 class="corner" id="corner"></h1>
     </div>
@@ -32,11 +34,13 @@
     <div class="retry">
         <button onclick="reset()" class="retryBut">Reset</button>
         <button onclick="changeMode()" class="retryBut">Mode</button>
+        
+        
     </div>
     <!-- Game -->
     <div class="game">
         <div class="topRow">
-            <button class="but light" id="aer" onclick="linkingV2(this)">a</button>
+            <button class="but light red" id="aer" onclick="">a</button>
             <button class="but light" id="AQ" onclick="linkingV2(this)">A</button>
             <button class="but light" id="bnq" onclick="linkingV2(this)">b</button>
             
@@ -45,7 +49,7 @@
         <div class="midRow">
             <button class="but light" id="DE" onclick="linkingV2(this)">D</button>
             <button class="but light" id="but5" ></button>
-            <button class="but light" id="BM" onclick="linkingV2(this)">B</button>
+            <button class="but light red" id="BM" onclick="">B</button>
             
         </div>
         
@@ -60,18 +64,18 @@
             <button class="fakebut" id="but7" ></button>
             <button class="fakebut" id="but8" ></button>
             <button class="fakebut" id="but9" ></button>
-            <button class="but light" id="aer" onclick="linkingV2(this)">e</button>
+            <button class="but light red" id="aer" onclick="">e</button>
             <button class="but light" id="DE" onclick="linkingV2(this)">E</button>
             <button class="but light" id="dfi" onclick="linkingV2(this)">f</button>
             <button class="but light" id="dfi" onclick="linkingV2(this)">i</button>
             <button class="but light" id="CI" onclick="linkingV2(this)">I</button>
             <button class="but light" id="cjm" onclick="linkingV2(this)">j</button>
             <button class="but light" id="cjm" onclick="linkingV2(this)">m</button>
-            <button class="but light" id="BM" onclick="linkingV2(this)">M</button>
+            <button class="but light red" id="BM" onclick="">M</button>
             <button class="but light" id="bnq" onclick="linkingV2(this)">n</button>
             <button class="but light" id="bnq" onclick="linkingV2(this)">q</button>
             <button class="but light" id="AQ" onclick="linkingV2(this)">Q</button>
-            <button class="but light" id="aer" onclick="linkingV2(this)">r</button>
+            <button class="but light red" id="aer" onclick="">r</button>
         </div>
         <div class="botRow">
             <button class="fakebut" id="but7" ></button>
@@ -123,8 +127,13 @@
             <button class="but light" id="otw" onclick="linkingV2(this)">w</button>
         </div>
         <!-- end of the second and third layer -->
-
         
+        
+    </div>
+    <div class="algorithm">
+        <h1>Edge swapping algorithm / T perm: R U R' U' R' F R2 U' R' U' R U R' F'</h1>
+        <h1>Corner swapping algorithm / Y perm (modified): R U' R' U' R U R' F' R U R' U' R' F R</h1>
+        <h1>Parity algorithm / Ra perm:(R U R' F') (R U2 R' U2) R' F R (U R U2 R') [U']</h1>
     </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
