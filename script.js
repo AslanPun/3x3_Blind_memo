@@ -167,13 +167,13 @@ function changeMode() {
 
     if( mode == "light"){
         mode = "dark";
-        img.src = "images/cube_logo_dark.png";
+        img.src = "cube_logo_dark.png";
 
         
     }
     else if (mode == "dark"){
         mode = "light";
-        img.src = "images/cube_logo_light.png";
+        img.src = "cube_logo_light.png";
 
     }
     document.getElementById("edge").innerHTML = "";
