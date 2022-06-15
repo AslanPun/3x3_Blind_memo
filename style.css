@@ -2,6 +2,7 @@ html {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     border: 0px;
     background-color: rgb(24, 24, 24);
     color:rgb(151, 146, 137);
+    
 
 }
 
@@ -48,6 +50,7 @@ h3 {
 p {
     text-align: center;
 }
+
 .green {
     background-color:rgb(144, 238, 144);
 }
@@ -63,6 +66,10 @@ p {
     background-color:rgb(211, 211, 211);
     color:rgb(0, 0, 0);
 }
+.red {
+    background-color:rgb(238, 144, 144);
+    color:rgb(0, 0, 0);
+}
 
 .but {
     border-color: rgb(24, 24, 24);
@@ -74,6 +81,7 @@ p {
     height:5rem;
     width:5rem;
     font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     /* border-radius: 1rem; */
 
