@@ -182,6 +182,7 @@ function resetColor(element) {
 } 
 
 var img = document.getElementById("img");
+var img2 = document.getElementById("img2");
 
 
 
@@ -192,12 +193,14 @@ function changeMode() {
     if( mode == "light"){
         mode = "dark";
         img.src = "cube_logo_dark.png";
+        img2.src = "cube_logo_dark_2.png";
 
         
     }
     else if (mode == "dark"){
         mode = "light";
         img.src = "cube_logo_light.png";
+        img2.src = "cube_logo_light_2.png";
 
     }
     document.getElementById("edge").innerHTML = "";
