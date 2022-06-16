@@ -15,18 +15,11 @@ body {
 
 }
 
-#background1 {
-    
-    width: 100%; 
-    height: 100%; 
-    position:absolute;
-    left: 0px; 
-    top: 0px; 
-    z-index: -1;
-}
+
 
 
 h1 {
+    
     text-align: center;
 }
 h2 {
@@ -36,6 +29,55 @@ h3 {
     text-align: center;
     
 }
+.flexbox_container{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+
+    /* flex-direction: column; */
+    /* justify-content: center; */
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    /* justify-content: center; */
+}
+.algorithm{
+    display: flex;
+    flex-direction: column;
+}
+.header_picture_left {
+    display: inline;
+    justify-content: left;
+    /* width: 100%; 
+    height: 100%;  */
+    /* position: absolute;
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; */
+}
+.header_picture_right {
+    display: inline;
+    justify-content: right;
+    /* width: 100%; 
+    height: 100%;  */
+    /* position: absolute;
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; */
+}
+.header_text {
+    justify-content: center;
+}
+
+
 .sequence{
     text-align: center;
 }
@@ -83,6 +125,7 @@ p {
     font-size: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    flex-shrink: 0;
     /* border-radius: 1rem; */
 
 }
@@ -105,6 +148,9 @@ p {
     /* border-radius: 1rem; */
 
 }
+/* .midLayerOfCube{
+
+} */
 .topRow {
     display: flex;
     justify-content: center;
