@@ -144,7 +144,8 @@ p {
     width:5rem;
     font-size: 4rem;
     text-align: center;
-    visibility:hidden
+    visibility:hidden;
+    flex-shrink: 0;
     /* border-radius: 1rem; */
 
 }
