@@ -8,133 +8,171 @@
     <title>3x3 Blind Tracker</title>
 </head>
 <body>
-    <div id="background1" class="bgImg">
-        <img src="cube_logo_light.png" id="img" alt="" />
+    <div class="flexbox_container">
+
         
-    </div>
-    <h1>Track your 3x3 Blind memo (Pochmann Method)</h1>
+        <div class="header">
+            <div class="header_picture_left">
+                <img src="cube_logo_light.png" id="img" alt="" />
+                
+            </div>
+            <div class="header_text">
+                <h1>Track your 3x3 Blind memo (Pochmann Method)</h1>
+        
+                <h2>Click the letter pair that you've been to</h2>
     
-    <h2>Click the letter pair that you've been to</h2>
+            
+            
+                <div class="sequence">
+                    <button onclick="undoEdge()" class="retryBut">Delete</button>
+                    <h1 class="edge">Edges:</h1>
+                    <h1 class="edge" id="edge"></h1>
+                </div>
+                <div class="sequence">
+                    <button onclick="undoCorner()" class="retryBut">Delete</button>
+                    <h1 class="corner">Corners:</h1>
+                    <h1 class="corner" id="corner"></h1>
+                </div>
+            
+                
+                <!-- <h1>Boi</h1> -->
+                <!-- <h1 class="yourTime"><span id="displayTime">0.000 s</span></h1> -->
+                <div class="retry">
+                    <button onclick="reset()" class="retryBut">Reset</button>
+                    <button onclick="changeMode()" class="retryBut">Mode</button>
+                    
+                    
+                </div>
+            </div>
+            <div class="header_picture_right">
+                <img src="cube_logo_light_2.png" id="img2" alt="" />
+                
+            </div>
 
 
-    <div class="sequence">
-        <button onclick="undoEdge()" class="retryBut">Delete</button>
-        <h1 class="edge">Edges:</h1>
-        <h1 class="edge" id="edge"></h1>
+        </div>
+
+
+        <!-- Game -->
+        <div class="game">
+            <!-- start of the fist Layer -->
+            <div class="topLayerOfCube">
+                <div class="topRow">
+                    <button class="but light red" id="aer" onclick="">a</button>
+                    <button class="but light" id="AQ" onclick="linkingV2(this)">A</button>
+                    <button class="but light" id="bnq" onclick="linkingV2(this)">b</button>
+                    
+                </div>
+                
+                <div class="midRow">
+                    <button class="but light" id="DE" onclick="linkingV2(this)">D</button>
+                    <button class="but light" id="but5" ></button>
+                    <button class="but light red" id="BM" onclick="">B</button>
+                    
+                </div>
+                
+                <div class="botRow">
+                    <button class="but light" id="dfi" onclick="linkingV2(this)">d</button>
+                    <button class="but light" id="CI" onclick="linkingV2(this)">C</button>
+                    <button class="but light" id="cjm" onclick="linkingV2(this)">c</button>
+                    
+                </div>
+            </div>
+            <!-- end of the fist Layer -->
+
+            <!-- start of the second Layer -->
+            <div class="midLayerOfCube">
+                <div class="botRow">
+                    <!-- <button class="fakebut" id="but7" ></button>
+                    <button class="fakebut" id="but8" ></button>
+                    <button class="fakebut" id="but9" ></button> -->
+                    <button class="but light red" id="aer" onclick="">e</button>
+                    <button class="but light" id="DE" onclick="linkingV2(this)">E</button>
+                    <button class="but light" id="dfi" onclick="linkingV2(this)">f</button>
+                    <button class="but light" id="dfi" onclick="linkingV2(this)">i</button>
+                    <button class="but light" id="CI" onclick="linkingV2(this)">I</button>
+                    <button class="but light" id="cjm" onclick="linkingV2(this)">j</button>
+                    <button class="but light" id="cjm" onclick="linkingV2(this)">m</button>
+                    <button class="but light red" id="BM" onclick="">M</button>
+                    <button class="but light" id="bnq" onclick="linkingV2(this)">n</button>
+                    <button class="but light" id="bnq" onclick="linkingV2(this)">q</button>
+                    <button class="but light" id="AQ" onclick="linkingV2(this)">Q</button>
+                    <button class="but light red" id="aer" onclick="">r</button>
+                </div>
+                <div class="botRow">
+                    <!-- <button class="fakebut" id="but7" ></button>
+                    <button class="fakebut" id="but8" ></button>
+                    <button class="fakebut" id="but9" ></button> -->
+                    <button class="but light" id="HR" onclick="linkingV2(this)">H</button>
+                    <button class="but light" id="but7" ></button>
+                    <button class="but light" id="FL" onclick="linkingV2(this)">F</button>
+                    <button class="but light" id="FL" onclick="linkingV2(this)">L</button>
+                    <button class="but light" id="but3" ></button>
+                    <button class="but light" id="JP" onclick="linkingV2(this)">J</button>
+                    <button class="but light" id="JP" onclick="linkingV2(this)">P</button>
+                    <button class="but light" id="but9" ></button>
+                    <button class="but light" id="NT" onclick="linkingV2(this)">N</button>
+                    <button class="but light" id="NT" onclick="linkingV2(this)">T</button>
+                    <button class="but light" id="but8" ></button>
+                    <button class="but light" id="HR" onclick="linkingV2(this)">R</button>
+                </div>
+                <div class="botRow">
+                    <!-- <button class="fakebut" id="but7" ></button>
+                    <button class="fakebut" id="but8" ></button>
+                    <button class="fakebut" id="but9" ></button> -->
+                    <button class="but light" id="hsx" onclick="linkingV2(this)">h</button>
+                    <button class="but light" id="GX" onclick="linkingV2(this)">G</button>
+                    <button class="but light" id="glu" onclick="linkingV2(this)">g</button>
+                    <button class="but light" id="glu" onclick="linkingV2(this)">l</button>
+                    <button class="but light" id="KU" onclick="linkingV2(this)">K</button>
+                    <button class="but light" id="kpv" onclick="linkingV2(this)">k</button>
+                    <button class="but light" id="kpv" onclick="linkingV2(this)">p</button>
+                    <button class="but light" id="OV" onclick="linkingV2(this)">O</button>
+                    <button class="but light" id="otw" onclick="linkingV2(this)">o</button>
+                    <button class="but light" id="otw" onclick="linkingV2(this)">t</button>
+                    <button class="but light" id="SW" onclick="linkingV2(this)">S</button>
+                    <button class="but light" id="hsx" onclick="linkingV2(this)">s</button>
+                </div>
+            </div>
+            <!-- end of the second layer -->
+
+            <!-- Start of the third layer -->
+            <div class="botLayerOfCube">
+                <div class="botRow">
+                    <button class="but light" id="glu" onclick="linkingV2(this)">u</button>
+                    <button class="but light" id="KU" onclick="linkingV2(this)">U</button>
+                    <button class="but light" id="kpv" onclick="linkingV2(this)">v</button>
+                </div>
+                <div class="botRow">
+                    <button class="but light" id="GX" onclick="linkingV2(this)">X</button>
+                    <button class="but light" id="but8" ></button>
+                    <button class="but light" id="OV" onclick="linkingV2(this)">V</button>
+                </div>
+                <div class="botRow">
+                    <button class="but light" id="hsx" onclick="linkingV2(this)">x</button>
+                    <button class="but light" id="SW" onclick="linkingV2(this)">W</button>
+                    <button class="but light" id="otw" onclick="linkingV2(this)">w</button>
+                </div>
+            </div>
+
+            <!-- end of the third layer -->
+            
+            
+        </div>
+        <div class="algorithm">
+            <h1>Edge swapping algorithm / T perm: R U R' U' R' F R2 U' R' U' R U R' F'</h1>
+            <h1>Corner swapping algorithm / Y perm (modified): R U' R' U' R U R' F' R U R' U' R' F R</h1>
+            <h1>Parity algorithm / Ra perm:(R U R' F') (R U2 R' U2) R' F R (U R U2 R') [U']</h1>
+        </div>
     </div>
-    <div class="sequence">
-        <button onclick="undoCorner()" class="retryBut">Delete</button>
-        <h1 class="corner">Corners:</h1>
-        <h1 class="corner" id="corner"></h1>
-    </div>
-
     
-    <!-- <h1>Boi</h1> -->
-    <!-- <h1 class="yourTime"><span id="displayTime">0.000 s</span></h1> -->
-    <div class="retry">
-        <button onclick="reset()" class="retryBut">Reset</button>
-        <button onclick="changeMode()" class="retryBut">Mode</button>
-        
-        
-    </div>
-    <!-- Game -->
-    <div class="game">
-        <div class="topRow">
-            <button class="but light red" id="aer" onclick="">a</button>
-            <button class="but light" id="AQ" onclick="linkingV2(this)">A</button>
-            <button class="but light" id="bnq" onclick="linkingV2(this)">b</button>
-            
-        </div>
-        
-        <div class="midRow">
-            <button class="but light" id="DE" onclick="linkingV2(this)">D</button>
-            <button class="but light" id="but5" ></button>
-            <button class="but light red" id="BM" onclick="">B</button>
-            
-        </div>
-        
-        <div class="botRow">
-            <button class="but light" id="dfi" onclick="linkingV2(this)">d</button>
-            <button class="but light" id="CI" onclick="linkingV2(this)">C</button>
-            <button class="but light" id="cjm" onclick="linkingV2(this)">c</button>
-            
-        </div>
-        <!-- adding the second and third layer -->
-        <div class="botRow">
-            <button class="fakebut" id="but7" ></button>
-            <button class="fakebut" id="but8" ></button>
-            <button class="fakebut" id="but9" ></button>
-            <button class="but light red" id="aer" onclick="">e</button>
-            <button class="but light" id="DE" onclick="linkingV2(this)">E</button>
-            <button class="but light" id="dfi" onclick="linkingV2(this)">f</button>
-            <button class="but light" id="dfi" onclick="linkingV2(this)">i</button>
-            <button class="but light" id="CI" onclick="linkingV2(this)">I</button>
-            <button class="but light" id="cjm" onclick="linkingV2(this)">j</button>
-            <button class="but light" id="cjm" onclick="linkingV2(this)">m</button>
-            <button class="but light red" id="BM" onclick="">M</button>
-            <button class="but light" id="bnq" onclick="linkingV2(this)">n</button>
-            <button class="but light" id="bnq" onclick="linkingV2(this)">q</button>
-            <button class="but light" id="AQ" onclick="linkingV2(this)">Q</button>
-            <button class="but light red" id="aer" onclick="">r</button>
-        </div>
-        <div class="botRow">
-            <button class="fakebut" id="but7" ></button>
-            <button class="fakebut" id="but8" ></button>
-            <button class="fakebut" id="but9" ></button>
-            <button class="but light" id="HR" onclick="linkingV2(this)">H</button>
-            <button class="but light" id="but7" ></button>
-            <button class="but light" id="FL" onclick="linkingV2(this)">F</button>
-            <button class="but light" id="FL" onclick="linkingV2(this)">L</button>
-            <button class="but light" id="but3" ></button>
-            <button class="but light" id="JP" onclick="linkingV2(this)">J</button>
-            <button class="but light" id="JP" onclick="linkingV2(this)">P</button>
-            <button class="but light" id="but9" ></button>
-            <button class="but light" id="NT" onclick="linkingV2(this)">N</button>
-            <button class="but light" id="NT" onclick="linkingV2(this)">T</button>
-            <button class="but light" id="but8" ></button>
-            <button class="but light" id="HR" onclick="linkingV2(this)">R</button>
-        </div>
-        <div class="botRow">
-            <button class="fakebut" id="but7" ></button>
-            <button class="fakebut" id="but8" ></button>
-            <button class="fakebut" id="but9" ></button>
-            <button class="but light" id="hsx" onclick="linkingV2(this)">h</button>
-            <button class="but light" id="GX" onclick="linkingV2(this)">G</button>
-            <button class="but light" id="glu" onclick="linkingV2(this)">g</button>
-            <button class="but light" id="glu" onclick="linkingV2(this)">l</button>
-            <button class="but light" id="KU" onclick="linkingV2(this)">K</button>
-            <button class="but light" id="kpv" onclick="linkingV2(this)">k</button>
-            <button class="but light" id="kpv" onclick="linkingV2(this)">p</button>
-            <button class="but light" id="OV" onclick="linkingV2(this)">O</button>
-            <button class="but light" id="otw" onclick="linkingV2(this)">o</button>
-            <button class="but light" id="otw" onclick="linkingV2(this)">t</button>
-            <button class="but light" id="SW" onclick="linkingV2(this)">S</button>
-            <button class="but light" id="hsx" onclick="linkingV2(this)">s</button>
-        </div>
-        <div class="botRow">
-            <button class="but light" id="glu" onclick="linkingV2(this)">u</button>
-            <button class="but light" id="KU" onclick="linkingV2(this)">U</button>
-            <button class="but light" id="kpv" onclick="linkingV2(this)">v</button>
-        </div>
-        <div class="botRow">
-            <button class="but light" id="GX" onclick="linkingV2(this)">X</button>
-            <button class="but light" id="but8" ></button>
-            <button class="but light" id="OV" onclick="linkingV2(this)">V</button>
-        </div>
-        <div class="botRow">
-            <button class="but light" id="hsx" onclick="linkingV2(this)">x</button>
-            <button class="but light" id="SW" onclick="linkingV2(this)">W</button>
-            <button class="but light" id="otw" onclick="linkingV2(this)">w</button>
-        </div>
-        <!-- end of the second and third layer -->
-        
-        
-    </div>
-    <div class="algorithm">
-        <h1>Edge swapping algorithm / T perm: R U R' U' R' F R2 U' R' U' R U R' F'</h1>
-        <h1>Corner swapping algorithm / Y perm (modified): R U' R' U' R U R' F' R U R' U' R' F R</h1>
-        <h1>Parity algorithm / Ra perm:(R U R' F') (R U2 R' U2) R' F R (U R U2 R') [U']</h1>
-    </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
+<!-- .flexbox_container{
+    display: flex;
+    /* justify-content: center; */
+
+    
+} -->
