@@ -184,8 +184,15 @@ p {
     border-radius: 1rem;
 
 }
+.mode{
+    background-color:rgb(20, 20, 20);
+}
 .retryBut:hover {
     background-color:rgb(133, 218, 133) ;
+    cursor: pointer;
+}
+.mode:hover {
+    background-color:rgb(0, 0, 0) ;
     cursor: pointer;
 }
 #displayTime {
